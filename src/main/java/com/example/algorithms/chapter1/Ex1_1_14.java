@@ -12,20 +12,12 @@ public class Ex1_1_14 {
 
     private static int lg(int n) {
 
-        if(n < 1) {
-            return -1;
+        int i = n;
+        int c = 0;
+        while(i > 1) {
+            i /= 2;
+            c ++;
         }
-        int tmp = 1;
-        for(int i = 1; i < n; i++) {
-            tmp = tmp * 2;
-            if(tmp < n) {
-                continue;
-            } else if(tmp == n){
-                return i;
-            } else {
-                return i - 1;
-            }
-        }
-        return 0;
+        return c;
     }
 }
